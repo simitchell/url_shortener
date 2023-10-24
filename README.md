@@ -1,5 +1,10 @@
 <!-- CrudCo Url Shortner -->
 
+<!-- Admin info -->
+- sammitchell
+- admin@example.com
+- safepass1
+
 <!-- REQUIREMENTS -->
 
 Users can submit a long URL.
