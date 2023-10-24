@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = Url
         fields = ['title', 'long_url', 'short_url', 'user']
 
-class UrlsSerializer(serializers.HyperlinkedModelSerializer):
+class UrlsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Url
         fields = '__all__'
