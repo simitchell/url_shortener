@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import './App.css'
+import { UrlList } from './components/UrlList'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>Check out this React hotness</div>
+      <UrlList/>
       </>
   )
 }
 
-export default App
+export default App;
