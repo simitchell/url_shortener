@@ -16,7 +16,7 @@ export const UrlList = () => {
 
     return (
         <OuterContainer>
-            <h1>Observe the displaying of info</h1>
+            <h1>A header from react component</h1>
             <ul>
                 {urlList?.map((url, index) => {
                     return (
