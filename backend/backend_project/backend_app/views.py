@@ -16,13 +16,13 @@ from .serializers import UrlsSerializer
     
 
 class UrlViewSet(viewsets.ModelViewSet):
-#     permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     queryset = Url.objects.all().order_by('-title')
     serializer_class = UrlsSerializer
 
 class LogoutView(APIView):
-     # permission_classes = [IsAuthenticated]
+     permission_classes = [IsAuthenticated]
      
      def post(self, request):
           

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { OuterContainer } from "./MyStyles";
 
-export const UrlList = () => {
+ const UrlList = () => {
     const [urlList, setUrlList] = useState([]);
 
     useEffect(() => {
@@ -18,14 +18,16 @@ export const UrlList = () => {
         <OuterContainer>
             <h1>A header from react component</h1>
             <ul>
-                {urlList?.map((url, index) => {
+                {urlList?urlList?.map((url, index) => {
                     return (
                         <li key={index}>
                             {url.title} - {url.short_url}
                         </li>
                     )
-                })}
+                }): null}
             </ul>
         </OuterContainer>
     );
 };
+
+export default UrlList;
