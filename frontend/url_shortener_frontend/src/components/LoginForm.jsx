@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "./StyleButtons";
 
 export default function LoginForm() {
     const [username, setUsername] = useState("");
@@ -54,10 +55,10 @@ export default function LoginForm() {
                 />
             </label>
             <label>
-                <button
+                <Button
                     type="submit"
                 >Login
-                </button>
+                </Button>
             </label>
         </form>
     )

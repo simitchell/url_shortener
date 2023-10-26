@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { OuterContainer } from "./MyStyles";
 
- const UrlList = () => {
+const UrlList = () => {
     const [urlList, setUrlList] = useState([]);
 
     useEffect(() => {
@@ -16,16 +16,16 @@ import { OuterContainer } from "./MyStyles";
 
     return (
         <OuterContainer>
-            <h1>A header from react component</h1>
-            <ul>
-                {urlList?urlList?.map((url, index) => {
-                    return (
+            <h1>A header from the react component</h1>
+            {urlList ? (
+                <ul>
+                    {urlList.map((url, index) => (
                         <li key={index}>
                             {url.title} - {url.short_url}
                         </li>
-                    )
-                }): null}
-            </ul>
+                    ))}
+                </ul>
+            ) : null}
         </OuterContainer>
     );
 };
