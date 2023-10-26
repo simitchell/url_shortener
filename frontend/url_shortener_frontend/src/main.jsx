@@ -7,10 +7,6 @@ import {
 import Root from './routes/root';
 import Login from './routes/login';
 import UrlPage from './routes/url';
-// import Word from './routes/word';
-// import LoginForm from './components/LoginForm';
-// import App from './App.jsx'
-// import UrlList  from './components/UrlList';
 import './index.css'
 
 const router = createBrowserRouter([
@@ -21,22 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
-    // children: [
-    //   {
-    //   path: "/word",
-    //   element: <Word />
-    //   }
-    // ]
   },
   {
     path: "/url",
     element: <UrlPage />,
-    // children: [
-    //   {
-    //   path: "/word",
-    //   element: <Word />
-    //   }
-    // ]
   }
 ]);
 

@@ -3,7 +3,7 @@ import UrlForm from "../components/UrlForm";
 export default function UrlPage() {
     return (
      <div>
-        <p>Hello, from the URLFORM component</p>
+        <h1>Hello, from the URLFORM component</h1>
         <UrlForm />
      </div>
     );
