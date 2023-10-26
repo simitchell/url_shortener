@@ -14,6 +14,13 @@ from .serializers import UrlsSerializer
 # class UsersViewSet(viewsets.ModelViewSet):
 #     queryset = 
     
+# class HomeView(APIView):
+#      permission_classes = (IsAuthenticated, )
+
+#      def get(self, request):
+#           content = {'message': 'Welcome to the JWT Authentication page using React JS and Django!'}
+
+#      return Response(content)
 
 class UrlViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]

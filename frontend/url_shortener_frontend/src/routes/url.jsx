@@ -8,7 +8,7 @@ export default function UrlPage() {
         <h2>Please submit a url for shortenening</h2>
         <UrlForm />
         <h2>Url List</h2>
-        {/* <UrlList /> */}
+        <UrlList />
      </div>
     );
   }

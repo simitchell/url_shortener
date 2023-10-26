@@ -31,9 +31,14 @@ export default function LoginForm() {
         }).then(response => response.json());
         console.log('DATA IS:', data);
         const { access, refresh } = data;
+
+        // check statement to see if (if statement) login was correct
+
         localStorage.clear();
         localStorage.setItem('access_token', access);
         localStorage.setItem('refresh_token', refresh);
+
+        window.location.href = '/url'
     };
 
     return (
