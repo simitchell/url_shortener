@@ -11,9 +11,7 @@ export default function Root() {
             const response = await fetch(url, {
                 method: "GET",
                 headers:{
-                    "Authorization": `Bearer ${localStorage.getItem("access_token")}`
-            
-         
+                    "Authorization": `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk4MjkxMjc5LCJpYXQiOjE2OTgyODk0NzksImp0aSI6ImY2NTFkZmY3NmNiMDRiZjQ4MGVkZWJlODIyNjY5N2NkIiwidXNlcl9pZCI6MX0.30oYPXrJHhz160CzyE1Nl8rJ0FxsMlP_hwxJ5xp3_-Y`
             }})
             const json = await response.json();
             console.log("hello", json);
@@ -21,7 +19,9 @@ export default function Root() {
         }
         data();
     }, [])
-    // console.log("URL LIST: ", urlList);
-// 
-    // return { urlList };
+    return (
+        <>
+            <h1>Hello from Root Route</h1>
+        </>
+    )
 }

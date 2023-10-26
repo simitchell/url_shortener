@@ -4,41 +4,40 @@ import {
   createBrowserRouter, 
   RouterProvider 
 } from "react-router-dom";
-import Root from "./routes/root";
-// import Issue, { loader as issueLoader } from './routes/issue';
-import App from './App.jsx'
+import Root from './routes/root';
+import Login from './routes/login';
+import UrlPage from './routes/url';
+// import Word from './routes/word';
+// import LoginForm from './components/LoginForm';
+// import App from './App.jsx'
+// import UrlList  from './components/UrlList';
 import './index.css'
-import UrlList  from './components/UrlList';
-import Login from './components/LoginForm';
-
-
-import Something from './routes/Something';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    children: [
-      {
-        path: '/login',
-        element: <Login />
-      }
-    ]
-
-    // loader: rootLoader,
+  },
+  {
+    path: "/login",
+    element: <Login />,
     // children: [
     //   {
-    //     path: "/login",
-    //     element: <Login />,
-    //     // loader: rootLoader,
-    //   },
-    //   {
-    //     path: "/urllist",
-    //     element: <UrlList />,
-    //     // loader: rootLoader,
-    //   },
-    // ],
+    //   path: "/word",
+    //   element: <Word />
+    //   }
+    // ]
   },
+  {
+    path: "/url",
+    element: <UrlPage />,
+    // children: [
+    //   {
+    //   path: "/word",
+    //   element: <Word />
+    //   }
+    // ]
+  }
 ]);
 
 
