@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "./StyleButtons";
+import { Form } from "./StyleForm";
 
 export default function LoginForm() {
     const [username, setUsername] = useState("");
@@ -36,30 +37,28 @@ export default function LoginForm() {
     };
 
     return (
-        <form
+        <Form
             onSubmit={handleSubmit}>
-            <label>Username
+            <label>Username</label>
                 <input
                     type='text'
                     name='username'
                     value={username}
                     onChange={handleChangeUsername}
                 />
-            </label>
-            <label>Password
+            
+            <label>Password</label>
                 <input
                     type='password'
                     name='password'
                     value={password}
                     onChange={handleChangePassword}
                 />
-            </label>
-            <label>
                 <Button
                     type="submit"
                 >Login
                 </Button>
-            </label>
-        </form>
+            
+        </Form>
     )
 }

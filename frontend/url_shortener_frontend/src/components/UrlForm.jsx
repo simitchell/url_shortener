@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import { Button } from "./StyleButtons";
+import { Form } from "./StyleForm";
 
 export default function UrlForm() {
     const [title, setTitle] = useState("");
@@ -34,30 +36,28 @@ export default function UrlForm() {
     };
 
     return (
-        <form
+        <Form
             onSubmit={handleSubmit}>
-            <label>Link Title
+            <label>Link Title</label>
                 <input
                     type='text'
                     name='title'
                     value={title}
                     onChange={handleChangeTitle}
                 />
-            </label>
-            <label>Original Url
+            
+            <label>Original Url</label>
                 <input
                     type='url'
                     name='url'
                     value={url}
                     onChange={handleChangeUrl}
                 />
-            </label>
-            <label>
-                <button
-                    type="submit"
-                >Submit Url
-                </button>
-            </label>
-        </form>
+            
+            <Button
+                type="submit"
+            >Submit
+            </Button>
+        </Form>
     )
 }
