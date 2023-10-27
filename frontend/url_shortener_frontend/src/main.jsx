@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Login from "./routes/login";
-import UrlPage from "./routes/url";
+import Logout from "./routes/logout";
+// import UrlPage from "./routes/url";
 import "./index.css";
 import UrlForm from "./components/UrlForm";
 
@@ -14,12 +15,20 @@ const router = createBrowserRouter([
     // loader: rootLoader,
     children: [
       {
+        path: "/",
+        element: <Login />,
+      },
+      {
         path: "/login",
         element: <Login />,
       },
       {
         path: "/url",
         element: <UrlForm />,
+      },
+      {
+        path: "/logout",
+        element: <Logout />,
       },
     ],
   },

@@ -37,7 +37,7 @@ export default function Root() {
     <AuthProvider>
       <OuterContainer>
         {/* <MainNav /> */}
-        <h1>Hello from Root Route</h1>
+        <h1>Url shortener</h1>
         <Outlet />
       </OuterContainer>
     </AuthProvider>
